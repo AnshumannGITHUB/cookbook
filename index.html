@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rockwell';
+            background: linear-gradient(to bottom, #3d87e2, #8ebdfe); /* Blue gradient background */
+            color: #fff; /* White text color */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            position: relative; /* Make the body a positioning context */
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to bottom, #0071fa, #c4dcff); /* Gradient header background */
+            color: #fff; /* White text color */
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .column {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            height: 250px;
+            width: 250px;
+        }
+
+
+        .random-squares,
+        .random-squares2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .random-square,
+        .random-square2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+            border-radius: 3px;
+            pointer-events: none;
+            animation: drift 10s linear infinite, collision 0.5s ease infinite alternate;
+        }
+
+        .random-square {
+            background: #00aaff;
+        }
+
+        .random-square2 {
+            background: #fcfaff;
+        }
+
+        @keyframes drift {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(500px, 500px);
+            }
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to right, #161616, #585858);
+            color: #fff;
+            padding: 10px;
+            text-align: center;}
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>COOK-LY!© </h1>
+        <h3>
+            With great food comes great responsibility! A fun and interactive cookbook with a few delicious recipes!
+        </h3>
+    </header>
+ <div class="random-squares"></div>
+    <div class="random-squares2"></div>
+
+
+    
+    <!-- First Row -->
+<div class="row">
+    <div class="column">
+        <img src="https://bing.com/th?id=OSK.8ed0a4b8599f49a43e06a98cbf7d4349" alt="Chocolate Chip Cupcakes">
+        <p>Chocolate chip cupcakes!</p>
+        <p>RECIPE:
+            1. Add the flour, sugar, cocoa powder, baking soda, and salt to a large mixing bowl.
+            2. Whisk the dry ingredients to combine.
+            3. Add the buttermilk, oil, eggs, and vanilla to a medium mixing bowl.
+            4. Whisk the wet ingredients to combine.
+            5. Pour the wet ingredients into the dry ingredients and whisk until well combined and no dry streaks of flour remain.
+            6. Divide the cupcake batter among the cupcake liners, filling each about ⅔ full. Bake for 20 to 25 minutes or until a toothpick inserted into the center comes out clean. Let cool in the pan for a few minutes, then remove and finish cooling on a wire rack. Frost the cupcakes as desired.
+        </p>
+    </div>
+    <div class="column">
+        <img src="https://bing.com/th?id=OSK.d8a8dcbeae3819294e5c7ffd4fd295e0" alt="Fudgy Brownies">
+        <p>Fudgy brownies!</p>
+        <p>RECIPE:
+            1. Hot melted butter creates those crackly tops!
+            2. Whisk your butter and sugar really well.
+            3. Beat in your eggs for a good minute. This step is crucial for that crackly top
+            4. Do NOT over beat your batter once the flour and cocoa powder are added. THAT creates air in the batter which will give you cake-like textured brownies. Cakey is okay, but not today friends.
+            5. Try NOT over bake them! I like mine at exactly 21:30 minutes. You can go a little bit over if you like them set a bit more, but I don’t recommend it if you’re looking for the fudgiest brownies in this lifetime.
+            6. I bake my brownies on the top shelf in the oven. I find the middle shelf cooks them a lot faster and dries them out.
+        </p>
+    </div>
+</div>
+
+<!-- Second Row -->
+<div class="row">
+    <div class="column">
+        <img src="https://bing.com/th?id=OSK.80c224e2f3f577177064ea2c7d2c785a" alt="Frozen Fruit Popsicles">
+        <p>Frozen fruit popsicles!</p>
+        <p>RECIPE:
+            1. Add 2 cups frozen strawberries (thawed), 1/4 cup apple juice, 2 tablespoons honey, 1/2 lemon (juiced), 1 pinch salt.
+            2. Now mix all the ingredients together.
+            3. Freeze the juice mix in popsicle molds for 5 hours.
+            4. Enjoy!
+        </p>
+    </div>
+    <div class="column">
+        <img src="https://joyfoodsunshine.com/wp-content/uploads/2018/02/best-chocolate-chip-cookies-recipe-1.jpg" alt="Fudgy Chocolate Chip Cookies">
+        <p>Fudgy chocolate chip cookies!</p>
+        <p>RECIPE:
+            1. Combine the dry ingredients in a medium size bowl.
+            2. Cream together butter and sugars, make sure to soften the butter early by taking it out of the fridge at least two hours before baking so its ready to go when you need it.
+            3. Once butter/sugar mixture is beaten well, add the eggs & vanilla and beat to combine.
+            4. Add dry ingredients and stir until just combined. Then add the chocolate chips.
+            5. Once the cookie dough is finished, its time to portion and roll the dough.
+            6. Place the dough on a parchment lined baking sheet. Then, preheat the oven to 350 degrees Fahrenheit and put the cookies in the oven in the beginning of the preheating time. Set the timer for 15 minutes and remove the cookies after 15 minutes.
+            7. At the end of the baking time, let the cookies cool and enjoy!
+        </p>
+    </div>
+</div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const randomSquares = document.querySelector('.random-squares');
+    
+            for (let i = 0; i < 50; i++) {
+                const square = document.createElement('div');
+                square.classList.add('random-square');
+                square.style.top = Math.random() * 100 + 'vh';
+                square.style.left = Math.random() * 100 + 'vw';
+                square.style.animation = 'drift ' + (Math.random() * 10 + 5) + 's linear infinite';
+                randomSquares.appendChild(square);
+            }
+
+            const randomSquares2 = document.querySelector('.random-squares2');
+    
+            for (let i = 0; i < 50; i++) {
+                const square = document.createElement('div');
+                square.classList.add('random-square2');
+                square.style.top = Math.random() * 100 + 'vh';
+                square.style.left = Math.random() * 100 + 'vw';
+                square.style.animation = 'drift ' + (Math.random() * 10 + 5) + 's linear infinite';
+                randomSquares2.appendChild(square);
+            }
+        });
+    </script>
+
+    <div class="footer">
+        <p>2024 LIFE-LY!© All rights reserved</p>
+    </div>
+
+</body>
+
+</html>
